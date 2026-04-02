@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Partners | NMHSO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-['Inter']">
+
+    <nav class="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center text-white font-bold">FME</div>
+            <span class="font-bold text-green-800">NMHSO Resources</span>
+        </div>
+        <a href="index.html" class="text-sm font-semibold text-green-700 hover:underline">← Return to Home</a>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        
+        <div class="mb-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Resource Library</h2>
+            <p class="text-gray-600 mb-8">Official preparation materials approved by the STEMM Branch.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-green-700 text-2xl mb-4">📜</div>
+                    <h3 class="font-bold text-lg mb-2">Official Syllabi</h3>
+                    <p class="text-sm text-gray-500 mb-4">Updated scope for Medical, Health Sciences, and JSO categories.</p>
+                    <button class="text-sm font-bold text-green-700 hover:text-green-800">Download PDF ↓</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-blue-700 text-2xl mb-4">📝</div>
+                    <h3 class="font-bold text-lg mb-2">Past Questions</h3>
+                    <p class="text-sm text-gray-500 mb-4">Access practice papers from previous national finals.</p>
+                    <button class="text-sm font-bold text-blue-700 hover:text-blue-800">Access Archive ↓</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-purple-700 text-2xl mb-4">🏫</div>
+                    <h3 class="font-bold text-lg mb-2">Teacher Manuals</h3>
+                    <p class="text-sm text-gray-500 mb-4">Guidelines for school-level screening and coordination.</p>
+                    <button class="text-sm font-bold text-purple-700 hover:text-purple-800">Download Guide ↓</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-green-900 rounded-3xl p-12 text-white">
+            <div class="max-w-3xl">
+                <h2 class="text-3xl font-bold mb-4">Why Partner With NMHSO?</h2>
+                <div class="grid md:grid-cols-2 gap-6 mb-10">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-green-400 font-bold">✓</span>
+                        <p class="text-sm text-green-100">National visibility across all 36 states.</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="text-green-400 font-bold">✓</span>
+                        <p class="text-sm text-green-100">Direct impact on Nigerian youth and STEMM education.</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="text-green-400 font-bold">✓</span>
+                        <p class="text-sm text-green-100">Alignment with UN SDGs 3 (Health) and 4 (Education).</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="text-green-400 font-bold">✓</span>
+                        <p class="text-sm text-green-100">CSR alignment with government initiatives.</p>
+                    </div>
+                </div>
+                <button class="bg-white text-green-900 font-bold px-8 py-3 rounded-xl hover:bg-green-50 transition">
+                    Become a Partner
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center py-10 text-gray-400 text-sm">
+        <p>&copy; 2026 National Medical & Health Sciences Olympiad | STEMM Branch FME</p>
+    </footer>
+
+    <span id="current-year"></span>
+
+<script>
+  // This automatically gets the current year from the user's computer
+  document.getElementById("current-year").innerText = new Date().getFullYear();
+</script>
+</body>
+</html>

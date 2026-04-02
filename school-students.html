@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Records | NMHSO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <nav class="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-10 shadow-sm">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-green-700 rounded text-white flex items-center justify-center font-bold">SCH</div>
+            <h1 class="font-bold text-gray-800">School Admin</h1>
+        </div>
+        <div class="flex items-center space-x-6 text-sm">
+            <a href="school-dashboard.html" class="text-gray-500 hover:text-green-700 transition">Home</a>
+            <a href="school-nominate.html" class="text-gray-500 hover:text-green-700 transition">Nominate</a>
+            <a href="school-students.html" class="font-bold text-green-700 border-b-2 border-green-700 pb-1">Student List</a>
+            <a href="login.html" class="text-red-600 font-bold bg-red-50 px-4 py-2 rounded-lg">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-8 py-10">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800">Registered Candidates</h2>
+                <p class="text-gray-500 text-sm">A complete list of students nominated for the 2026 session.</p>
+            </div>
+            <button class="bg-white border-2 border-gray-100 text-gray-600 px-6 py-2 rounded-xl font-bold text-xs hover:bg-gray-50 transition">
+                📥 Export CSV List
+            </button>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden">
+            <table class="w-full text-left">
+                <thead class="bg-gray-50 text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                    <tr>
+                        <th class="px-8 py-5">Full Name</th>
+                        <th class="px-8 py-5">Category</th>
+                        <th class="px-8 py-5">Level</th>
+                        <th class="px-8 py-5">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="text-sm divide-y divide-gray-50">
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="px-8 py-5 font-bold text-gray-700">Chidi Okafor</td>
+                        <td class="px-8 py-5">NMHSO Medical</td>
+                        <td class="px-8 py-5">SS 3</td>
+                        <td class="px-8 py-5"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold">CONFIRMED</span></td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="px-8 py-5 font-bold text-gray-700">Amina Bello</td>
+                        <td class="px-8 py-5">Junior Science</td>
+                        <td class="px-8 py-5">SS 1</td>
+                        <td class="px-8 py-5"><span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-[10px] font-bold">PENDING</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <span id="current-year"></span>
+
+<script>
+  // This automatically gets the current year from the user's computer
+  document.getElementById("current-year").innerText = new Date().getFullYear();
+</script>
+</body>
+</html>

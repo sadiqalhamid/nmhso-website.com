@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Secretariat | NMHSO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-['Inter'] text-gray-900">
+
+    <nav class="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center text-white font-bold">FME</div>
+            <span class="font-bold text-green-800">NMHSO Support</span>
+        </div>
+        <a href="index.html" class="text-sm font-semibold text-gray-500 hover:text-green-700">← Back to Home</a>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                
+                <div class="space-y-8">
+                    <div>
+                        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Contact Us</h1>
+                        <p class="text-gray-600 leading-relaxed">
+                            Have questions about the National Medical & Health Sciences Olympiad? 
+                            Reach out to the STEMM Branch of the Federal Ministry of Education.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-2xl">📍</div>
+                            <div>
+                                <h4 class="font-bold">Headquarters</h4>
+                                <p class="text-sm text-gray-500">Federal Ministry of Education, Phase III,<br>Federal Secretariat, Abuja, Nigeria.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="text-2xl">📧</div>
+                            <div>
+                                <h4 class="font-bold">Official Email</h4>
+                                <p class="text-sm text-gray-500">secretariat@nmhso.gov.ng</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="text-2xl">📞</div>
+                            <div>
+                                <h4 class="font-bold">Helpline</h4>
+                                <p class="text-sm text-gray-500">+234 (0) 800-NMHSO-HELP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+                    <form id="contactForm" onsubmit="handleContact(event)" class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="senderName" required class="w-full p-4 bg-gray-50 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-green-600 transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="senderEmail" required class="w-full p-4 bg-gray-50 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-green-600 transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Subject</label>
+                            <select id="subject" class="w-full p-4 bg-gray-50 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-green-600 transition">
+                                <option>General Inquiry</option>
+                                <option>School Registration Problem</option>
+                                <option>Result Verification</option>
+                                <option>Partnership/Sponsorship</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" required class="w-full p-4 bg-gray-50 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-green-600 transition"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-green-700 text-white font-bold py-4 rounded-xl hover:bg-green-800 transition shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-10 text-center text-gray-400 text-xs">
+        <p>© 2026 Federal Ministry of Education | STEMM Branch Governance</p>
+    </footer>
+
+    <script>
+        function handleContact(event) {
+            event.preventDefault(); // Stop the page from refreshing
+
+            const name = document.getElementById('senderName').value;
+            const email = document.getElementById('senderEmail').value;
+            const msg = document.getElementById('message').value;
+
+            if(name && email && msg) {
+                alert("Thank you, " + name + "! Your message has been sent to the NMHSO Secretariat. We will reply to " + email + " shortly.");
+                document.getElementById('contactForm').reset();
+            } else {
+                alert("Please fill in all required fields.");
+            }
+        }
+        <span id="current-year"></span>
+  // This automatically gets the current year from the user's computer
+  document.getElementById("current-year").innerText = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | NMHSO Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col font-['Inter']">
+
+    <header class="bg-white border-b py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center text-white font-bold">FME</div>
+                <span class="font-bold text-green-800">NMHSO Portal</span>
+            </div>
+            <a href="index.html" class="text-sm text-gray-600 hover:text-green-700">← Back Home</a>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center px-6 py-12">
+        <div class="max-w-md w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="bg-green-700 p-8 text-center text-white">
+                <h1 class="text-2xl font-bold">Welcome Back</h1>
+                <p class="text-green-100 text-sm mt-2">Access your specialized portal</p>
+            </div>
+            
+            <div class="p-8 space-y-6">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Login As:</label>
+                    <select id="userRole" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-green-600">
+                        <option value="dashboard.html">Student (Participant)</option>
+                        <option value="school-portal.html">School (Administrator)</option>
+                        <option value="admin-panel.html">STEMM Branch (Super Admin)</option>
+                    </select>
+                </div>
+
+                <div>   
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Email / ID</label>
+                    <input type="text" id="email" placeholder="admin@nmhso.gov.ng" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-green-600">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-green-600">
+                </div>
+
+                <button type="button" onclick="handleLogin()" class="w-full bg-green-700 text-white font-bold py-3 rounded-lg hover:bg-green-800 transition shadow-lg">
+                    Secure Sign In
+                </button>
+
+                <p class="text-center text-sm text-gray-500 pt-4">
+                    Don't have an account? <a href="#" class="text-green-700 font-bold hover:underline">Register</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    function handleLogin() {
+        const email = document.getElementById('email').value;
+        const pass = document.getElementById('password').value;
+        const targetPage = document.getElementById('userRole').value;
+
+        // Test Credentials
+        const validEmail = "admin@nmhso.gov.ng";
+        const validPass = "password123";
+
+        if (email === validEmail && pass === validPass) {
+            // Redirects to the value from your dropdown
+            window.location.href = targetPage;
+        } else {
+            alert("Invalid Credentials!\n\nUse: admin@nmhso.gov.ng\nPass: password123");
+        }
+    }
+
+    // This part must be separate from the handleLogin function but still inside <script>
+    window.onload = function() {
+        const yearSpan = document.getElementById("current-year");
+        if (yearSpan) {
+            yearSpan.innerText = new Date().getFullYear();
+        }
+    };
+    </script>
+</body>
+</html>

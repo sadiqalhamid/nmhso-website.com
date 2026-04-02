@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMHSO | National Medical & Health Sciences Olympiad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient { 
+            background: linear-gradient(rgba(0, 32, 15, 0.85), rgba(0, 32, 15, 0.85)), 
+            url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1350&q=80'); 
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-green-700 rounded-full flex items-center justify-center text-white font-bold shadow-md">FME</div>
+                <div>
+                    <h2 class="text-sm font-bold text-green-800 leading-tight tracking-tight">Federal Ministry of Education</h2>
+                    <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest">STEMM Branch Secretariat</p>
+                </div>
+            </div>
+            
+            <ul class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
+                <li><a href="index.html" class="text-green-700">Home</a></li>
+                <li><a href="#about" class="hover:text-green-700 transition">About</a></li>
+                <li><a href="news.html" class="hover:text-green-700 transition">News & Media</a></li>
+                <li><a href="resources.html" class="hover:text-green-700 transition">Resources</a></li>
+                <li><a href="contact.html" class="hover:text-green-700 transition">Contact Us</a></li>
+            </ul>
+
+            <a href="login.html" class="bg-green-700 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-green-800 transition shadow-lg shadow-green-100">
+                Portals Login
+            </a>
+        </nav>
+    </header>
+
+    <section class="hero-gradient h-[75vh] flex items-center text-white">
+        <div class="container mx-auto px-6 text-center">
+            <span class="bg-green-600/30 text-green-400 border border-green-500/30 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">2026 Registration Now Open</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">National Medical & Health <br> Sciences Olympiad</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-300">
+                Nigeria’s premier national platform for discovering and nurturing future medical and health science leaders.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="register-school.html" class="bg-green-600 hover:bg-green-500 px-10 py-4 rounded-xl font-bold transition shadow-xl">Register Your School</a>
+                <a href="#competitions" class="bg-white text-green-900 hover:bg-gray-100 px-10 py-4 rounded-xl font-bold transition shadow-xl">Explore Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white border-b">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="space-y-2">
+                <div class="text-3xl">🇳🇬</div>
+                <h4 class="font-bold text-gray-800">36 States + FCT</h4>
+            </div>
+            <div class="space-y-2">
+                <div class="text-3xl">🌐</div>
+                <h4 class="font-bold text-gray-800">Global Exposure</h4>
+            </div>
+            <div class="space-y-2">
+                <div class="text-3xl">🏥</div>
+                <h4 class="font-bold text-gray-800">SDG Alignment</h4>
+            </div>
+            <div class="space-y-2">
+                <div class="text-3xl">📜</div>
+                <h4 class="font-bold text-gray-800">Govt-Endorsed</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="competitions" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">National Competition Categories</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="text-4xl mb-4">🧬</div>
+                    <h3 class="font-bold text-xl mb-2 text-green-800">Medical Olympiad</h3>
+                    <p class="text-sm text-gray-500 mb-6">Biology and Medical Sciences for SS1 - SS3 students.</p>
+                    <a href="register-school.html" class="text-green-700 font-bold group-hover:underline">Join Category →</a>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="font-bold text-xl mb-2 text-blue-800">Health Hackathon</h3>
+                    <p class="text-sm text-gray-500 mb-6">Innovative digital health solutions for youth innovators.</p>
+                    <a href="register-school.html" class="text-blue-700 font-bold group-hover:underline">Join Category →</a>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <h3 class="font-bold text-xl mb-2 text-yellow-600">Junior Science</h3>
+                    <p class="text-sm text-gray-500 mb-6">Foundation health sciences for JSS1 - JSS3 students.</p>
+                    <a href="register-school.html" class="text-yellow-700 font-bold group-hover:underline">Join Category →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Fostering Academic Excellence</h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-12">
+                    The NMHSO is a Federal Ministry of Education–approved initiative designed to identify, nurture and showcase exceptional talents in medical and health sciences among Nigerian students.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div class="bg-white p-10 rounded-3xl shadow-sm border-t-4 border-green-600">
+                        <h3 class="font-bold text-xl mb-3 text-green-800">Our Vision</h3>
+                        <p class="text-gray-500 text-sm">To build a nationally coordinated pipeline of future medical professionals, researchers and health innovators.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl shadow-sm border-t-4 border-green-600">
+                        <h3 class="font-bold text-xl mb-3 text-green-800">Our Mission</h3>
+                        <p class="text-gray-500 text-sm">To promote excellence, innovation and global competitiveness in medical education through structured competitions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-t">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-10">Endorsed & Supported By</h3>
+            <div class="flex flex-wrap justify-center gap-12 grayscale opacity-50">
+                <div class="font-black text-2xl text-gray-400">UNESCO</div>
+                <div class="font-black text-2xl text-gray-400">WHO</div>
+                <div class="font-black text-2xl text-gray-400">TETFUND</div>
+                <div class="font-black text-2xl text-gray-400">NUC</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-green-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm opacity-70">© 2026 Federal Ministry of Education | STEMM Branch Secretariat</p>
+            <div class="mt-4 flex justify-center space-x-6 text-xs font-bold">
+                <a href="contact.html" class="hover:underline">Support</a>
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <span id="current-year"></span>
+
+<script>
+  // This automatically gets the current year from the user's computer
+  document.getElementById("current-year").innerText = new Date().getFullYear();
+</script>
+</body>
+</html>

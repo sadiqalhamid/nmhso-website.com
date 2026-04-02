@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Admin | Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 font-['Inter'] flex">
+    <aside class="w-64 bg-green-900 min-h-screen text-white p-6 sticky top-0 h-screen">
+        <div class="flex items-center space-x-2 mb-10"><div class="w-8 h-8 bg-white text-green-900 rounded flex items-center justify-center font-bold">A</div><span class="font-bold">NMHSO ADMIN</span></div>
+        <nav class="space-y-4 text-sm">
+            <a href="admin.html" class="block p-3 hover:bg-green-800 rounded-lg transition">📊 Dashboard</a>
+            <a href="admin-schools.html" class="block p-3 hover:bg-green-800 rounded-lg transition">🏫 Schools List</a>
+            <a href="admin-payments.html" class="block p-3 hover:bg-green-800 rounded-lg transition">💰 Payment Approvals</a>
+            <a href="admin-analytics.html" class="block p-3 bg-green-800 rounded-lg font-bold">📝 Exam Analytics</a>
+        </nav>
+    </aside>
+    <main class="flex-grow p-8">
+        <h2 class="text-2xl font-bold text-slate-800 mb-8">Participation Analytics</h2>
+        <div class="bg-white p-8 rounded-3xl border shadow-sm">
+            <div class="space-y-6">
+                <div><div class="flex justify-between text-xs font-bold mb-1"><span>South West</span><span>85%</span></div><div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-green-600 h-2 rounded-full w-[85%]"></div></div></div>
+                <div><div class="flex justify-between text-xs font-bold mb-1"><span>North Central</span><span>62%</span></div><div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-blue-600 h-2 rounded-full w-[62%]"></div></div></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

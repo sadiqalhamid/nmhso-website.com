@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schools List | NMHSO Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-100 font-['Inter'] flex">
+    <aside class="w-64 bg-green-900 min-h-screen text-white p-6 hidden md:block sticky top-0 h-screen">
+        <div class="flex items-center space-x-2 mb-10">
+            <div class="w-8 h-8 bg-white text-green-900 rounded flex items-center justify-center font-bold">A</div>
+            <span class="font-bold tracking-tight">NMHSO ADMIN</span>
+        </div>
+        <nav class="space-y-4 text-sm">
+            <a href="admin.html" class="block p-3 hover:bg-green-800 rounded-lg transition">📊 Dashboard</a>
+            <a href="admin-schools.html" class="block p-3 bg-green-800 rounded-lg font-bold">🏫 Schools List</a>
+            <a href="admin-payments.html" class="block p-3 hover:bg-green-800 rounded-lg transition">💰 Payment Approvals</a>
+            <a href="admin-analytics.html" class="block p-3 hover:bg-green-800 rounded-lg transition">📝 Exam Analytics</a>
+            <a href="index.html" class="block p-3 mt-20 text-green-300 hover:text-white">← Logout</a>
+        </nav>
+    </aside>
+
+    <main class="flex-grow p-8">
+        <h2 class="text-2xl font-bold text-slate-800 mb-8">Registered Institutions</h2>
+        <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-bold text-slate-700">Full School Directory</h3>
+                <input type="text" placeholder="Filter by State..." class="text-xs border p-2 rounded-lg outline-none focus:ring-2 focus:ring-green-600">
+            </div>
+            <table class="w-full text-left text-sm">
+                <thead class="bg-slate-50 text-slate-400 text-[10px] font-bold uppercase tracking-widest">
+                    <tr>
+                        <th class="p-6">Institution Name</th>
+                        <th class="p-6">EMIS Code</th>
+                        <th class="p-6">State</th>
+                        <th class="p-6">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-50">
+                    <tr><td class="p-6 font-bold">King's College Lagos</td><td class="p-6 font-mono text-xs">LA/2024/009</td><td class="p-6">Lagos</td><td class="p-6"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold">ACTIVE</span></td></tr>
+                    <tr><td class="p-6 font-bold">Queens College</td><td class="p-6 font-mono text-xs">LA/2024/012</td><td class="p-6">Lagos</td><td class="p-6"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold">ACTIVE</span></td></tr>
+                    <tr><td class="p-6 font-bold">Govt. College Kaduna</td><td class="p-6 font-mono text-xs">KD/2021/442</td><td class="p-6">Kaduna</td><td class="p-6"><span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-[10px] font-bold">PENDING</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

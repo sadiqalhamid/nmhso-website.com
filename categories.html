@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Category | NMHSO 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 font-['Inter']">
+
+    <nav class="p-6 flex justify-between items-center bg-white border-b">
+        <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-green-700 rounded text-white flex items-center justify-center font-bold">N</div>
+            <span class="font-black text-slate-800 tracking-tighter">NMHSO 2026</span>
+        </div>
+        <a href="school-dashboard.html" class="text-sm font-bold text-slate-400 hover:text-green-700">← Back to Dashboard</a>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-8 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-black text-slate-900 mb-4">Choose Your Track</h1>
+            <p class="text-slate-500 max-w-lg mx-auto">Select the appropriate category for your students. Each school can nominate multiple students across different tracks.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="group bg-white p-8 rounded-3xl border-2 border-transparent hover:border-green-600 transition-all shadow-xl shadow-slate-200/50 flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-green-100 text-green-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">🩺</div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-3">Medical Olympiad</h2>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Biology and Medical Sciences focus. Designed for senior students (SS1 - SS3) aiming for clinical careers.</p>
+                </div>
+                <a href="school-nominate.html?type=medical" class="w-full py-4 bg-slate-900 text-white text-center rounded-2xl font-bold hover:bg-green-700 transition">Join Category →</a>
+            </div>
+
+            <div class="group bg-white p-8 rounded-3xl border-2 border-transparent hover:border-blue-600 transition-all shadow-xl shadow-slate-200/50 flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">💻</div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-3">Health Hackathon</h2>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Innovative digital health solutions. For youth innovators building apps, AI, or hardware for healthcare.</p>
+                </div>
+                <a href="school-nominate.html?type=hackathon" class="w-full py-4 bg-slate-900 text-white text-center rounded-2xl font-bold hover:bg-blue-600 transition">Join Category →</a>
+            </div>
+
+            <div class="group bg-white p-8 rounded-3xl border-2 border-transparent hover:border-amber-600 transition-all shadow-xl shadow-slate-200/50 flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">🔬</div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-3">Junior Science</h2>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Foundation health sciences for JSS1 - JSS3. Building the next generation of Nigerian scientists.</p>
+                </div>
+                <a href="school-nominate.html?type=junior" class="w-full py-4 bg-slate-900 text-white text-center rounded-2xl font-bold hover:bg-amber-600 transition">Join Category →</a>
+            </div>
+
+        </div>
+
+        <div class="mt-20 p-8 bg-slate-900 rounded-3xl text-center">
+            <p class="text-slate-400 text-sm">Need help choosing? <a href="#" class="text-white underline">Download the 2026 Participation Guide (PDF)</a></p>
+        </div>
+    </div>
+
+    <span id="current-year"></span>
+
+<script>
+  // This automatically gets the current year from the user's computer
+  document.getElementById("current-year").innerText = new Date().getFullYear();
+</script>
+</body>
+</html>

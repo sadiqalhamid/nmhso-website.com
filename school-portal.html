@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Dashboard | NMHSO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-['Inter']">
+
+    <nav class="bg-white border-b px-4 md:px-8 py-4 flex flex-col md:flex-row justify-between items-center sticky top-0 z-10 shadow-sm gap-4">
+        <div class="flex items-center space-x-3 w-full md:w-auto">
+            <div class="w-10 h-10 bg-green-700 rounded text-white flex-shrink-0 flex items-center justify-center font-bold">SCH</div>
+            <div>
+                <h1 class="font-bold text-gray-800 leading-none text-sm md:text-base">School Admin</h1>
+                <span class="text-[10px] text-green-600 font-bold uppercase">ID: NMH-SEC-2026</span>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm overflow-x-auto w-full md:w-auto pb-2 md:pb-0 whitespace-nowrap">
+            <a href="school-dashboard.html" class="font-bold text-green-700 border-b-2 border-green-700 pb-1">Home</a>
+            <a href="school-nominate.html" class="text-gray-500 hover:text-green-700 transition">Nominate</a>
+            <a href="school-students.html" class="text-gray-500 hover:text-green-700 transition">Student List</a>
+            <a href="login.html" class="text-red-600 font-bold bg-red-50 px-3 py-1.5 md:px-4 md:py-2 rounded-lg">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 md:px-8 py-6 md:py-10">
+        <div class="mb-8">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-800">Welcome Back, Registrar</h2>
+            <p class="text-gray-500 text-sm">Overview of your school's participation in NMHSO 2026.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
+            <div class="bg-white p-4 md:p-6 rounded-2xl border shadow-sm">
+                <p class="text-gray-400 text-[10px] font-bold uppercase">Total Nominated</p>
+                <h3 class="text-2xl md:text-3xl font-black text-green-700">24</h3>
+            </div>
+            <div class="bg-white p-4 md:p-6 rounded-2xl border shadow-sm">
+                <p class="text-gray-400 text-[10px] font-bold uppercase">Medical Science</p>
+                <h3 class="text-2xl md:text-3xl font-black text-blue-700">12</h3>
+            </div>
+            <div class="bg-white p-4 md:p-6 rounded-2xl border shadow-sm">
+                <p class="text-gray-400 text-[10px] font-bold uppercase">Junior Science</p>
+                <h3 class="text-2xl md:text-3xl font-black text-yellow-600">8</h3>
+            </div>
+            <div class="bg-white p-4 md:p-6 rounded-2xl border shadow-sm">
+                <p class="text-gray-400 text-[10px] font-bold uppercase">Hackathon</p>
+                <h3 class="text-2xl md:text-3xl font-black text-purple-700">4</h3>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div class="bg-green-700 p-6 md:p-8 rounded-3xl text-white shadow-lg shadow-green-100">
+                <h3 class="text-lg md:text-xl font-bold mb-2">New Nomination</h3>
+                <p class="opacity-80 text-xs md:text-sm mb-6">Register a new student for the 2026 session. Deadline is approaching.</p>
+                <a href="school-nominate.html" class="bg-white text-green-700 px-6 py-3 rounded-xl font-bold text-sm inline-block w-full md:w-auto text-center">Start Registration →</a>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-200">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-2">Announcement</h3>
+                <p class="text-gray-500 text-xs md:text-sm mb-4 font-medium italic">"Physical venue inspections for your zone start this Friday. Ensure all student IDs are printed."</p>
+                <span class="text-[10px] bg-amber-100 text-amber-700 px-2 py-1 rounded font-bold">FROM SECRETARIAT</span>
+            </div>
+        </div>
+    </div>
+     
+    <footer class="text-center p-6 text-gray-400 text-xs">
+        &copy; <span id="current-year"></span> National Medical & Health Sciences Olympiad
+    </footer>
+
+<script>
+  document.getElementById("current-year").innerText = new Date().getFullYear();
+</script>
+</body>
+</html>

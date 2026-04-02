@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Results | NMHSO 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 font-['Inter'] min-h-screen flex flex-col">
+
+    <nav class="p-6 bg-white border-b">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="font-black text-green-800">NMHSO 2026</div>
+            <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-green-700 transition underline">Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="max-w-md w-full">
+            
+            <div class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200 border border-slate-100 text-center">
+                <div class="w-20 h-20 bg-green-100 text-green-700 rounded-full flex items-center justify-center mx-auto text-3xl mb-6">🎓</div>
+                <h2 class="text-2xl font-bold text-slate-800">Check Your Standing</h2>
+                <p class="text-sm text-slate-500 mt-2 mb-8">Enter your unique Examination ID to view your Stage 1 results.</p>
+
+                <form class="space-y-4">
+                    <div class="relative">
+                        <input type="text" placeholder="NMHSO-2026-XXXX" class="w-full p-5 bg-slate-50 border-2 border-slate-100 rounded-2xl outline-none focus:border-green-600 transition text-center font-bold tracking-widest uppercase">
+                    </div>
+                    <button type="button" onclick="showResult()" class="w-full bg-green-700 text-white font-bold py-5 rounded-2xl shadow-lg hover:bg-green-800 transition active:scale-95">
+                        View My Score
+                    </button>
+                </form>
+            </div>
+
+            <div id="resultCard" class="hidden mt-8 bg-green-900 text-white p-8 rounded-3xl shadow-2xl animate-bounce-short">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase opacity-60 tracking-widest">Candidate Name</p>
+                        <h3 class="text-xl font-bold">Adebayo Oluwaseun</h3>
+                    </div>
+                    <div class="bg-white/20 px-3 py-1 rounded-full text-[10px] font-bold">QUALIFIED</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+                    <div>
+                        <p class="text-[10px] opacity-60 uppercase font-bold">Total Score</p>
+                        <p class="text-3xl font-black">88<span class="text-sm opacity-50">/100</span></p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[10px] opacity-60 uppercase font-bold">State Rank</p>
+                        <p class="text-3xl font-black">#04</p>
+                    </div>
+                </div>
+
+                <button class="w-full mt-8 bg-white text-green-900 font-bold py-3 rounded-xl text-sm hover:bg-green-50 transition">
+                    Download Official Result Slip (PDF)
+                </button>
+            </div>
+
+            <p class="text-center mt-8 text-[10px] text-slate-400 font-bold uppercase tracking-tighter">
+                Verified by STEMM Branch | Federal Ministry of Education
+            </p>
+        </div>
+    </main>
+
+    <script>
+        function showResult() {
+            document.getElementById('resultCard').classList.remove('hidden');
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+        <span id="current-year"></span>
+  // This automatically gets the current year from the user's computer
+  document.getElementById("current-year").innerText = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

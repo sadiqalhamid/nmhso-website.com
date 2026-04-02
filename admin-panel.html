@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Command Center | NMHSO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        #mobile-sidebar { transition: transform 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen flex font-['Inter']">
+
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden lg:hidden">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="toggleMenu()"></div>
+        
+        <nav id="mobile-sidebar" class="fixed top-0 left-0 bottom-0 w-72 bg-slate-900 p-6 flex flex-col -translate-x-full shadow-2xl">
+            <div class="flex justify-between items-center mb-10">
+                <h1 class="text-white font-bold text-xl">STEMM Admin</h1>
+                <button onclick="toggleMenu()" class="text-white text-2xl">✕</button>
+            </div>
+            <div class="space-y-4 flex-grow">
+                <a href="#" class="block text-white bg-slate-800 p-3 rounded-lg font-semibold">📊 Global Overview</a>
+                <a href="#" class="block text-slate-300 p-3">🏆 Manage Olympiads</a>
+                <a href="#" class="block text-slate-300 p-3">🏢 School Verification</a>
+                <a href="#" class="block text-slate-300 p-3">📄 Content CMS</a>
+                <a href="login.html" class="block text-red-400 p-3 mt-10 border-t border-slate-800">Logout System</a>
+            </div>
+        </nav>
+    </div>
+
+    <aside class="w-72 bg-slate-900 text-slate-300 flex-shrink-0 hidden lg:flex flex-col sticky top-0 h-screen">
+        <div class="p-8 border-b border-slate-800">
+            <h1 class="text-white font-bold text-xl uppercase tracking-widest">STEMM Admin</h1>
+            <p class="text-xs text-slate-500 mt-1">Federal Ministry of Education</p>
+        </div>
+        <nav class="flex-grow p-6 space-y-4">
+            <a href="#" class="flex items-center space-x-3 text-white bg-slate-800 p-3 rounded-lg font-semibold">
+                <span>📊</span> <span>Global Overview</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 hover:text-white p-3 transition">
+                <span>🏆</span> <span>Manage Olympiads</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 hover:text-white p-3 transition">
+                <span>🏢</span> <span>School Verification</span>
+            </a>
+            <a href="login.html" class="flex items-center space-x-3 text-red-400 hover:text-red-300 p-3 mt-10">
+                <span>🚪</span> <span>Logout System</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="flex-grow w-full">
+        <header class="bg-white shadow-sm p-4 lg:p-6 flex justify-between items-center sticky top-0 z-40">
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleMenu()" class="lg:hidden text-2xl text-slate-800 focus:outline-none">☰</button>
+                <h2 class="text-lg lg:text-2xl font-bold text-slate-800 truncate">National Analytics</h2>
+            </div>
+            <div class="flex space-x-2">
+                <button class="hidden sm:block bg-slate-100 px-4 py-2 rounded-lg text-sm font-semibold">Export</button>
+                <button class="bg-green-700 text-white px-3 py-2 lg:px-4 lg:py-2 rounded-lg text-xs lg:text-sm font-bold">+ New</button>
+            </div>
+        </header>
+
+        <div class="p-4 lg:p-8 space-y-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <p class="text-slate-400 text-xs font-bold uppercase">Total Participants</p>
+                    <h3 class="text-3xl font-extrabold text-slate-900">12,450</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <p class="text-slate-400 text-xs font-bold uppercase">Registered Schools</p>
+                    <h3 class="text-3xl font-extrabold text-slate-900">842</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <p class="text-slate-400 text-xs font-bold uppercase">Active Olympiads</p>
+                    <h3 class="text-3xl font-extrabold text-blue-600">5</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <p class="text-slate-400 text-xs font-bold uppercase">System Health</p>
+                    <h3 class="text-3xl font-extrabold text-green-600">99.9%</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <h3 class="font-bold text-slate-800">Live Competition Progress</h3>
+                    <input type="text" placeholder="Search..." class="w-full sm:w-auto border px-4 py-2 rounded-lg text-sm">
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left min-w-[700px]">
+                        <thead class="bg-slate-50 text-slate-500 text-xs font-bold uppercase">
+                            <tr>
+                                <th class="px-6 py-4">Olympiad Name</th>
+                                <th class="px-6 py-4">Current Stage</th>
+                                <th class="px-6 py-4">Total Entries</th>
+                                <th class="px-6 py-4">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y text-sm">
+                            <tr>
+                                <td class="px-6 py-4 font-bold">NMHSO Medical 2026</td>
+                                <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold">School Level</span></td>
+                                <td class="px-6 py-4">8,200</td>
+                                <td class="px-6 py-4"><button class="text-blue-600 font-bold underline">Manage</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const sidebar = document.getElementById('mobile-sidebar');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                setTimeout(() => {
+                    sidebar.classList.remove('-translate-x-full');
+                }, 10);
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>

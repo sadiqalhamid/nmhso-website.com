@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nominate Student | NMHSO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <nav class="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-10 shadow-sm">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-green-700 rounded text-white flex items-center justify-center font-bold">SCH</div>
+            <h1 class="font-bold text-gray-800">School Admin</h1>
+        </div>
+        <div class="flex items-center space-x-6 text-sm">
+            <a href="school-dashboard.html" class="text-gray-500 hover:text-green-700 transition">Home</a>
+            <a href="school-nominate.html" class="font-bold text-green-700 border-b-2 border-green-700 pb-1">Nominate</a>
+            <a href="school-students.html" class="text-gray-500 hover:text-green-700 transition">Student List</a>
+            <a href="login.html" class="text-red-600 font-bold bg-red-50 px-4 py-2 rounded-lg">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-8 py-12">
+        <div class="max-w-2xl mx-auto">
+            <div class="bg-white p-10 rounded-3xl border border-gray-200 shadow-xl">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800">Student Nomination Form</h2>
+                    <p class="text-gray-500 text-sm">Enter the official details as they appear on the school record.</p>
+                </div>
+                
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-black text-gray-400 uppercase mb-2">Student Full Name</label>
+                        <input type="text" class="w-full border-2 border-gray-100 p-4 rounded-xl bg-gray-50 focus:border-green-600 outline-none transition" placeholder="e.g. Olumide Hassan">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-black text-gray-400 uppercase mb-2">Examination Category</label>
+                            <select class="w-full border-2 border-gray-100 p-4 rounded-xl bg-gray-50 outline-none focus:border-green-600 transition">
+                                <option>Medical Sciences</option>
+                                <option>Public Health</option>
+                                <option>Junior Science</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black text-gray-400 uppercase mb-2">Current Class Level</label>
+                            <select class="w-full border-2 border-gray-100 p-4 rounded-xl bg-gray-50 outline-none focus:border-green-600 transition">
+                                <option>JSS 1</option>
+                                <option>JSS 2</option>
+                                <option>JSS 3</option>
+                                <option>SS 1</option>
+                                <option>SS 2</option>
+                                <option>SS 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-green-700 text-white font-bold py-4 rounded-2xl shadow-lg shadow-green-100 hover:bg-green-800 transition transform hover:-translate-y-1">
+                            Verify & Submit Nomination
+                        </button>
+                        <p class="text-center text-[10px] text-gray-400 mt-4 italic">By clicking submit, you confirm the student is currently enrolled in your institution.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <span id="current-year"></span>
+
+<script>
+  // This automatically gets the current year from the user's computer
+  document.getElementById("current-year").innerText = new Date().getFullYear();
+</script>
+</body>
+</html>
